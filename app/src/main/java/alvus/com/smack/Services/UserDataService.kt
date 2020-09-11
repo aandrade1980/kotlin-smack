@@ -1,5 +1,6 @@
 package alvus.com.smack.Services
 
+import alvus.com.smack.Controller.App
 import android.graphics.Color
 import java.util.*
 
@@ -38,8 +39,10 @@ object UserDataService {
         avatarName = ""
         name = ""
         email = ""
-        AuthService.authToken = ""
-        AuthService.userEmail = ""
-        AuthService.isLoggedIn = false
+        App.prefs.authToken = ""
+        App.prefs.userEmail = ""
+        App.prefs.isLoggedIn = false
+        MessageService.clearMessages()
+        MessageService.clearChannels()
     }
 }
